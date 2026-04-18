@@ -35,6 +35,7 @@
 #include <windows.h>
 #include <stdio.h>
 
+#define RUNNER_VERSION "1.0.0"
 #define MSG_BUF_SIZE 4096
 
 typedef long (__cdecl *LVFUNC)        (char* msg_buf, long* len);
@@ -94,6 +95,7 @@ int main(int argc, char* argv[]) {
     int i;
 
     if (argc < 3) {
+        fprintf(stderr, "lv_dll_runner v" RUNNER_VERSION "\n");
         fprintf(stderr, "Usage: lv_dll_runner.exe <dll_path> <function_name> [--input <value>] [--output]\n");
         return 1;
     }
