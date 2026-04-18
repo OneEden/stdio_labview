@@ -43,6 +43,21 @@ LabVIEW VIs must export functions using `__cdecl` calling convention. Four signa
 
 In addition to `msg_buf` and `result_buf`, the VI can write freely to stdout and stderr at any time during execution using `kernel32.WriteFile` with the handle obtained from `kernel32.GetStdHandle`.
 
+## Quick Start
+
+1. **Download** the pre-built binaries from [GitHub Releases](../../releases):
+   - `lv_dll_runner_32.exe` — for 32-bit LabVIEW DLLs (LV 8.2, XP compatible)
+   - `lv_dll_runner_64.exe` — for 64-bit LabVIEW DLLs (LV 2026+)
+
+2. **Export** your VI as a Shared Library DLL using the `__cdecl` calling convention and one of the four supported signatures (see [Exported Function Convention](#exported-function-convention)).
+
+3. **Run** the runner from the command line:
+   ```bat
+   lv_dll_runner_64.exe MyVI.dll MyFunc
+   ```
+
+4. **Capture** stdout, stderr, and the exit code in your CI script as with any ordinary process.
+
 ## Usage
 
 ```bat
@@ -110,12 +125,28 @@ stdio_labview/
 
 ## Building the Runner
 
+### Prerequisites
+
+The runner is built with **TCC 0.9.27** (Tiny C Compiler), which is bundled in `lib/tcc/`:
+
+| Binary | Target |
+|--------|--------|
+| `lib/tcc/tcc.exe` | 32-bit (i386), compatible with Windows XP SP2+ |
+| `lib/tcc/x86_64-win32-tcc.exe` | 64-bit (x86_64), Windows 7+ |
+
+TCC is used because it produces 32-bit binaries that link against MSVCRT and run on Windows XP without any runtime prerequisites. The bundled copy is self-contained — no installation required.
+
+To use a system-installed TCC instead, download TCC 0.9.27 from [bellard.org/tcc](https://bellard.org/tcc/) or [savannah.gnu.org/releases/tinycc](https://download.savannah.gnu.org/releases/tinycc/) and add it to your `PATH`, then update the paths in `lib/lv_dll_runner/build.bat`.
+
+### Build
+
 ```bat
-cd lib\runner_builder
-build.bat
+lib\lv_dll_runner\build.bat
 ```
 
-Output: `..\..\build\lv_dll_runner_32.exe` and `..\..\build\lv_dll_runner_64.exe`
+Output: `build\lv_dll_runner_32.exe` and `build\lv_dll_runner_64.exe`
+
+> **Note:** The `build/` directory is not tracked by git. Pre-built binaries are distributed via [GitHub Releases](../../releases).
 
 ## LabVIEW Integration
 
