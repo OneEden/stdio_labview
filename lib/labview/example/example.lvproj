@@ -377,8 +377,8 @@
             <Property Name="SourceItem[2].VIProtoInfo[0]VIProtoLenInput" Type="Int">-1</Property>
             <Property Name="SourceItem[2].VIProtoInfo[0]VIProtoLenOutput" Type="Int">-1</Property>
             <Property Name="SourceItem[2].VIProtoInfo[0]VIProtoName" Type="Str">return value</Property>
-            <Property Name="SourceItem[2].VIProtoInfo[0]VIProtoOutputIdx" Type="Int">-1</Property>
-            <Property Name="SourceItem[2].VIProtoInfo[0]VIProtoPassBy" Type="Int">0</Property>
+            <Property Name="SourceItem[2].VIProtoInfo[0]VIProtoOutputIdx" Type="Int">3</Property>
+            <Property Name="SourceItem[2].VIProtoInfo[0]VIProtoPassBy" Type="Int">1</Property>
             <Property Name="SourceItem[2].VIProtoInfo[1]VIProtoDir" Type="Int">1</Property>
             <Property Name="SourceItem[2].VIProtoInfo[1]VIProtoInputIdx" Type="Int">-1</Property>
             <Property Name="SourceItem[2].VIProtoInfo[1]VIProtoLenInput" Type="Int">2</Property>

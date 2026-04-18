@@ -14,7 +14,7 @@ int32_t __cdecl HelloWorld(char Message[], int32_t *len);
 /*!
  * Event
  */
-void __cdecl Event(char Message[], int32_t *len);
+int32_t __cdecl Event(char Message[], int32_t *len);
 /*!
  * CallWithOutput
  */
