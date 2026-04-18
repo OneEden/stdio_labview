@@ -18,7 +18,7 @@ CI scripts can invoke `lv_dll_runner.exe` and capture stdout, stderr, and the ex
 | Item | Support |
 |------|---------|
 | **OS** | Windows XP SP2+, Windows 7/10/11 |
-| **LabVIEW** | 8.2+ (32-bit), 2026+ (64-bit); any version that exports C-compatible DLLs |
+| **LabVIEW** | Source VIs are saved in LV 8.2 format and open in all modern versions without upgrade dialogs. Tested with LV 2026 (64-bit). Any version that exports C-compatible DLLs is supported. |
 | **Compiler** | TCC (included); also works with MSVC / MinGW |
 
 ## Exported Function Convention
