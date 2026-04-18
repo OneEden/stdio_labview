@@ -90,31 +90,19 @@ stdio_labview/
     ├── labview/                              # LabVIEW helper VIs and examples
     │   ├── STD write.vi                      #   Write to stdout/stderr via WriteFile
     │   ├── Parse Error.vi                    #   Format LabVIEW error cluster to string
-    │   └── example/                          #   Example VI projects + compiled DLL outputs
-    │       ├── HelloWorld/                   #     Default mode (no flags)
-    │       ├── CallWithInput/                #     --input mode
-    │       ├── CallWithOutput/               #     --output mode
-    │       ├── CallWithInputAndOutput/       #     --input --output mode
-    │       ├── Event/                        #     Event-driven: free stdout/stderr + status
-    │       ├── builds/                       #     Compiled DLL outputs (lv82 + lv2026)
-    │       │   ├── HelloWorld/
-    │       │   │   ├── export_lv82/          #       32-bit DLL
-    │       │   │   └── export_lv2026/        #       64-bit DLL
-    │       │   ├── CallWithInput/            #     (same structure)
-    │       │   ├── CallWithOutput/
-    │       │   ├── CallWithInputAndOutput/
-    │       │   └── Event/
-    │       └── test/                         #     Test scripts (one per DLL × version)
-    │           ├── HelloWorld_lv82.bat
-    │           ├── HelloWorld_lv2026.bat
-    │           ├── CallWithInput_lv82.bat
-    │           ├── CallWithInput_lv2026.bat
-    │           ├── CallWithOutput_lv82.bat
-    │           ├── CallWithOutput_lv2026.bat
-    │           ├── CallWithInputAndOutput_lv82.bat
-    │           ├── CallWithInputAndOutput_lv2026.bat
-    │           ├── Event_lv82.bat
-    │           └── Event_lv2026.bat
+    │   ├── builds/                           #   Compiled DLL outputs
+    │   │   └── example/                      #     Single DLL containing all example VIs
+    │   │       ├── export_lv82/              #       32-bit DLL (example.dll)
+    │   │       └── export_lv2026/            #       64-bit DLL (example.dll)
+    │   ├── example/                          #   Example VI projects (source)
+    │   │   ├── HelloWorld/                   #     Default mode (no flags)
+    │   │   ├── CallWithInput/                #     --input mode
+    │   │   ├── CallWithOutput/               #     --output mode
+    │   │   ├── CallWithInputAndOutput/       #     --input --output mode
+    │   │   └── Event/                        #     Event-driven: free stdout/stderr + status
+    │   └── test/                             #   Test scripts
+    │       ├── test_lv2026.bat               #     Run all 64-bit tests
+    │       └── test_lv82.bat                 #     Run all 32-bit tests
     └── tcc/                                  # Bundled TCC compiler
         ├── tcc.exe                           #   32-bit compiler
         └── x86_64-win32-tcc.exe              #   64-bit compiler
