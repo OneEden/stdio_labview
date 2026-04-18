@@ -25,12 +25,12 @@ CI scripts can invoke `lv_dll_runner.exe` and capture stdout, stderr, and the ex
 
 LabVIEW VIs must export functions using `__cdecl` calling convention. Four signatures are supported, selected at runtime via command-line flags.
 
-| Mode | Flags | C Signature |
-|------|-------|-------------|
-| Default | _(none)_ | `long __cdecl func(char* msg_buf, long* len)` |
-| Input | `--input <value>` | `long __cdecl func(char* input, char* msg_buf, long* len)` |
-| Output | `--output` | `long __cdecl func(char* msg_buf, char* result_buf, long* len, long* result_len)` |
-| Input + Output | `--input <value> --output` | `long __cdecl func(char* input, char* msg_buf, char* result_buf, long* len, long* result_len)` |
+| Mode | Flags | C Signature | Typical VI Type Example|
+|------|-------|-------------|-----------------|
+| Default | _(none)_ | `long __cdecl func(char* msg_buf, long* len)` | ![alt text](resource/none.png)|
+| Input | `--input <value>` | `long __cdecl func(char* input, char* msg_buf, long* len)` |![alt text](resource/input.png)|
+| Output | `--output` | `long __cdecl func(char* msg_buf, char* result_buf, long* len, long* result_len)` | ![alt text](resource/output.png)|
+| Input + Output | `--input <value> --output` | `long __cdecl func(char* input, char* msg_buf, char* result_buf, long* len, long* result_len)` | ![alt text](resource/input_output.png)|
 
 | Parameter | Direction | Description |
 |-----------|-----------|-------------|
