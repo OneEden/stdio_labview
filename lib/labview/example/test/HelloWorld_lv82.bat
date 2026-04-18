@@ -1,8 +1,8 @@
 @echo off
 setlocal
 
-set RUNNER=%~dp0..\..\..\..\..\build\lv_dll_runner_32.exe
-set DLL=%~dp0export_lv82\HelloWorld.dll
+set RUNNER=%~dp0..\..\..\..\build\lv_dll_runner_32.exe
+set DLL=%~dp0..\builds\HelloWorld\export_lv82\HelloWorld.dll
 set FUNC=HelloWorld
 
 echo [test] Runner: %RUNNER%

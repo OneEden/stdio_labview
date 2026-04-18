@@ -1,18 +1,16 @@
 @echo off
 setlocal
 
-set RUNNER=%~dp0..\..\..\..\..\build\lv_dll_runner_32.exe
-set DLL=%~dp0export_lv82\CallWithInputAndOutput.dll
-set FUNC=CallWithInputAndOutput
-set INPUT=Hello from runner
+set RUNNER=%~dp0..\..\..\..\build\lv_dll_runner_64.exe
+set DLL=%~dp0..\builds\CallWithOutput\export_lv2026\CallWithInput.dll
+set FUNC=CallWithOutput
 
 echo [test] Runner: %RUNNER%
 echo [test] DLL:    %DLL%
 echo [test] Func:   %FUNC%
-echo [test] Input:  %INPUT%
 echo.
 
-%RUNNER% "%DLL%" "%FUNC%" --input "%INPUT%" --output
+%RUNNER% "%DLL%" "%FUNC%" --output
 set EXIT=%errorlevel%
 
 echo.

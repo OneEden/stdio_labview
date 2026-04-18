@@ -96,14 +96,25 @@ stdio_labview/
     │       ├── CallWithOutput/               #     --output mode
     │       ├── CallWithInputAndOutput/       #     --input --output mode
     │       ├── Event/                        #     Event-driven: free stdout/stderr + status
-    │       └── builds/                       #     Compiled DLL outputs (lv82 + lv2026)
-    │           ├── HelloWorld/
-    │           │   ├── export_lv82/          #       32-bit DLL + test_lv82.bat
-    │           │   └── export_lv2026/        #       64-bit DLL + test_lv2026.bat
-    │           ├── CallWithInput/            #     (same structure)
-    │           ├── CallWithOutput/
-    │           ├── CallWithInputAndOutput/
-    │           └── Event/
+    │       ├── builds/                       #     Compiled DLL outputs (lv82 + lv2026)
+    │       │   ├── HelloWorld/
+    │       │   │   ├── export_lv82/          #       32-bit DLL
+    │       │   │   └── export_lv2026/        #       64-bit DLL
+    │       │   ├── CallWithInput/            #     (same structure)
+    │       │   ├── CallWithOutput/
+    │       │   ├── CallWithInputAndOutput/
+    │       │   └── Event/
+    │       └── test/                         #     Test scripts (one per DLL × version)
+    │           ├── HelloWorld_lv82.bat
+    │           ├── HelloWorld_lv2026.bat
+    │           ├── CallWithInput_lv82.bat
+    │           ├── CallWithInput_lv2026.bat
+    │           ├── CallWithOutput_lv82.bat
+    │           ├── CallWithOutput_lv2026.bat
+    │           ├── CallWithInputAndOutput_lv82.bat
+    │           ├── CallWithInputAndOutput_lv2026.bat
+    │           ├── Event_lv82.bat
+    │           └── Event_lv2026.bat
     └── tcc/                                  # Bundled TCC compiler
         ├── tcc.exe                           #   32-bit compiler
         └── x86_64-win32-tcc.exe              #   64-bit compiler

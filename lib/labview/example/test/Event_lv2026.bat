@@ -1,9 +1,9 @@
 @echo off
 setlocal
 
-set RUNNER=%~dp0..\..\..\..\..\build\lv_dll_runner_64.exe
-set DLL=%~dp0export_lv2026\HelloWorld.dll
-set FUNC=HelloWorld
+set RUNNER=%~dp0..\..\..\..\build\lv_dll_runner_64.exe
+set DLL=%~dp0..\builds\Event\export_lv2026\Event.dll
+set FUNC=Event
 
 echo [test] Runner: %RUNNER%
 echo [test] DLL:    %DLL%
@@ -18,7 +18,7 @@ echo [test] Exit code: %EXIT%
 if %EXIT% == 0 (
     echo [test] PASS
 ) else (
-    echo [test] FAIL
+    echo [test] FAIL ^(expected^)
 )
 
 endlocal

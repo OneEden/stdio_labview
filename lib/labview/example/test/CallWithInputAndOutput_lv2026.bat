@@ -1,8 +1,8 @@
 @echo off
 setlocal
 
-set RUNNER=%~dp0..\..\..\..\..\build\lv_dll_runner_64.exe
-set DLL=%~dp0export_lv2026\CallWithInputAndOutput.dll
+set RUNNER=%~dp0..\..\..\..\build\lv_dll_runner_64.exe
+set DLL=%~dp0..\builds\CallWithInputAndOutput\export_lv2026\CallWithInputAndOutput.dll
 set FUNC=CallWithInputAndOutput
 set INPUT=Hello from runner
 
