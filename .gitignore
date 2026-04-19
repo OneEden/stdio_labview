@@ -1,3 +1,5 @@
 build/
+tmp/
 .windsurf/
 lib/labview/example/stdio_labview/.stdio_labview.UserState
+lib/labview/src/lv_dll_wrapper/.lv_dll_wrapper.UserState
