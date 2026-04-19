@@ -1,4 +1,4 @@
-# stdio_labview
+# LabVIEW-DLL-Runner
 
 A lightweight console host that lets LabVIEW-compiled DLLs write to stdout/stderr and return a status code — enabling CI systems like Jenkins to capture LabVIEW execution output and exit codes without a TCP bridge or external process.
 
